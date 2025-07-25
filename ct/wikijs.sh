@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/build.func)
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Source: https://js.wiki/
 
 APP="Wikijs"

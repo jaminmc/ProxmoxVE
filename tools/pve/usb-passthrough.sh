@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 
 echo -e "\e[1;33m This script will allow USB passthrough to a PRIVILEGED LXC Container ONLY\e[0m"
 while true; do

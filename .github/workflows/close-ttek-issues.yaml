@@ -25,7 +25,7 @@ jobs:
                     
             Also make sure your Bash command starts with:
             \`\`\`bash
-            bash <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/ct/...)
+            bash <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/ct/...)
             \`\`\`
 
             This issue is being closed automatically.`;

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/build.func)
 # Source: https://github.com/gristlabs/grist-core
 
 APP="Grist"

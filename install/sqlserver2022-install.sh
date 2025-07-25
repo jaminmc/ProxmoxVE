@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: Kristian Skov
-# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Source: https://www.microsoft.com/en-us/sql-server/sql-server-2022
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

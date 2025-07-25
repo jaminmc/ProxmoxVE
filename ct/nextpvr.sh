@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/build.func)
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/tteck/Proxmox/raw/Proxmox9betatest/LICENSE
 # Source: https://nextpvr.com/
 
 APP="NextPVR"

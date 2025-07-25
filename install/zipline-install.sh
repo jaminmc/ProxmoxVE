@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2025 tteck
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
-# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Source: https://github.com/diced/zipline
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

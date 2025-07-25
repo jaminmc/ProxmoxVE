@@ -2,14 +2,14 @@
 # Author: tteck (tteckster)
 # Co-Author: MickLesk
 # License: MIT
-# https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 
 if ! command -v curl >/dev/null 2>&1; then
   printf "\r\e[2K%b" '\033[93m Setup Source \033[m' >&2
   apt-get update >/dev/null 2>&1
   apt-get install -y curl >/dev/null 2>&1
 fi
-source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/core.func)
+source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/core.func)
 load_functions
 # This function enables IPv6 if it's not disabled and sets verbose mode
 verb_ip6() {
@@ -29,7 +29,7 @@ catch_errors() {
 
 # This function handles errors
 error_handler() {
-  source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/api.func)
+  source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/api.func)
   printf "\e[?25h"
   local exit_code="$?"
   local line_number="$1"
@@ -52,7 +52,7 @@ setting_up_container() {
       break
     fi
     echo 1>&2 -en "${CROSS}${RD} No Network! "
-    sleep $RETRY_EVERY
+    sleep "$RETRY_EVERY"
   done
   if [ "$(hostname -I)" = "" ]; then
     echo 1>&2 -e "\n${CROSS}${RD} No Network After $RETRY_NUM Tries${CL}"
@@ -147,7 +147,7 @@ EOF
   rm -rf /usr/lib/python3.*/EXTERNALLY-MANAGED
   msg_ok "Updated Container OS"
 
-  source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/tools.func)
+  source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/tools.func)
 }
 
 # This function modifies the message of the day (motd) and SSH settings
@@ -197,7 +197,7 @@ EOF
     systemctl restart $(basename $(dirname $GETTY_OVERRIDE) | sed 's/\.d//')
     msg_ok "Customized Container"
   fi
-  echo "bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/ct/${app}.sh)\"" >/usr/bin/update
+  echo "bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/ct/${app}.sh)\"" >/usr/bin/update
   chmod +x /usr/bin/update
 
   if [[ -n "${SSH_AUTHORIZED_KEY}" ]]; then

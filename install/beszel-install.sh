@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: Michelle Zitzerman (Sinofage)
-# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Source: https://beszel.dev/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

@@ -1,6 +1,6 @@
 <div align="center">
   <a href="#">
-    <img src="https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/images/logo.png" height="100px" />
+    <img src="https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/images/logo.png" height="100px" />
  </a>
 </div>
 <h1 align="center">Changelog</h1>
@@ -4632,7 +4632,7 @@ Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit 
 - **Automatic Update of Repository:** The update function now uses the new repository `community-scripts/ProxmoxVE` for Debian/Ubuntu LXC containers.
   
   ```bash
-  bash -c "$(curl -fsSL https://github.com/jaminmc/ProxmoxVE/raw/main/misc/update-repo.sh)"
+  bash -c "$(curl -fsSL https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/misc/update-repo.sh)"
 
 ## 2024-10-31
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-source <(curl -s https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/build.func)
+source <(curl -s https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/build.func)
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Source: https://github.com/LibreTranslate/LibreTranslate
 
 APP="LibreTranslate"
@@ -29,13 +29,13 @@ function update_script() {
     exit
   fi
   RELEASE=$(curl -s https://api.github.com/repos/LibreTranslate/LibreTranslate/releases/latest | grep "tag_name" | awk '{print substr($2, 3, length($2)-4) }')
-  if [[ "${RELEASE}" != "$(cat $HOME/.libretranslate)" ]] || [[ ! -f $HOME/.libretranslate ]]; then
+  if [[ "${RELEASE}" != "$(cat "$HOME"/.libretranslate)" ]] || [[ ! -f $HOME/.libretranslate ]]; then
     msg_info "Stopping $APP"
     systemctl stop libretranslate
     msg_ok "Stopped $APP"
 
     msg_info "Updating $APP to ${RELEASE}"
-    cd /opt/libretranslate
+    cd /opt/libretranslate || exit
     source .venv/bin/activate
     $STD pip install -U libretranslate
     msg_ok "Updated $APP to ${RELEASE}"

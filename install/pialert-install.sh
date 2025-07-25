@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Source: https://github.com/leiweibau/Pi.Alert/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -56,7 +56,7 @@ $STD pip3 install pyunifi
 msg_ok "Installed Python Dependencies"
 
 msg_info "Installing Pi.Alert"
-curl -fsSL https://github.com/leiweibau/Pi.Alert/raw/main/tar/pialert_latest.tar | tar xvf - -C /opt >/dev/null 2>&1
+curl -fsSL https://github.com/leiweibau/Pi.Alert/raw/Proxmox9betatest/tar/pialert_latest.tar | tar xvf - -C /opt >/dev/null 2>&1
 rm -rf /var/lib/ieee-data /var/www/html/index.html
 sed -i -e 's#^sudo cp -n /usr/share/ieee-data/.* /var/lib/ieee-data/#\# &#' -e '/^sudo mkdir -p 2_backup$/s/^/# /' -e '/^sudo cp \*.txt 2_backup$/s/^/# /' -e '/^sudo cp \*.csv 2_backup$/s/^/# /' /opt/pialert/back/update_vendors.sh
 mv /var/www/html/index.lighttpd.html /var/www/html/index.lighttpd.html.old

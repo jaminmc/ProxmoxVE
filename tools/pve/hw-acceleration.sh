@@ -3,9 +3,9 @@
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Execute within the Proxmox shell
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/tools/pve/hw-acceleration.sh)"
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/tools/pve/hw-acceleration.sh)"
 
 set -e
 function header_info {

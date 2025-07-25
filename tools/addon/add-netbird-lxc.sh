@@ -4,7 +4,7 @@
 # Author: tteck (tteckster)
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 
 function header_info {
   clear

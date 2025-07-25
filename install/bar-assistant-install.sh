@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: bvdberg01 | CanbiZ
-# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Source: https://github.com/karlomikus/bar-assistant
 # Source: https://github.com/karlomikus/vue-salt-rim
 # Source: https://www.meilisearch.com/

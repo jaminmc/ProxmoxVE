@@ -2,9 +2,9 @@
 
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: michelroegl-brunner
-# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 
-source /dev/stdin <<<$(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/api.func)
+source /dev/stdin <<<$(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/api.func)
 
 function header_info {
   clear

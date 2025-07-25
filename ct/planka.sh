@@ -2,7 +2,7 @@
 source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/refs/heads/main/misc/build.func)
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Source: https://github.com/plankanban/planka
 
 APP="PLANKA"

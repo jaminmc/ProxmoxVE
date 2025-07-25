@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/build.func)
 # Copyright (c) 2021-2025 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Source: https://zwave-js.github.io/zwave-js-ui/#/
 
 APP="Zwave-JS-UI"
@@ -35,9 +35,9 @@ function update_script() {
 
     msg_info "Updating Z-Wave JS UI"
     rm -rf /opt/zwave-js-ui/*
-    cd /opt/zwave-js-ui
+    cd /opt/zwave-js-ui || exit
     curl -fsSL "https://github.com/zwave-js/zwave-js-ui/releases/download/${RELEASE}/zwave-js-ui-${RELEASE}-linux.zip" -o $(basename "https://github.com/zwave-js/zwave-js-ui/releases/download/${RELEASE}/zwave-js-ui-${RELEASE}-linux.zip")
-    $STD unzip zwave-js-ui-${RELEASE}-linux.zip
+    $STD unzip zwave-js-ui-"${RELEASE}"-linux.zip
     msg_ok "Updated Z-Wave JS UI"
 
     msg_info "Starting Service"
@@ -45,7 +45,7 @@ function update_script() {
     msg_ok "Started Service"
 
     msg_info "Cleanup"
-    rm -rf /opt/zwave-js-ui/zwave-js-ui-${RELEASE}-linux.zip
+    rm -rf /opt/zwave-js-ui/zwave-js-ui-"${RELEASE}"-linux.zip
     rm -rf /opt/zwave-js-ui/store
     msg_ok "Cleaned"
     msg_ok "Updated Successfully!\n"

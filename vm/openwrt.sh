@@ -4,10 +4,10 @@
 # Author: tteck (tteckster)
 #         Jon Spriggs (jontheniceguy)
 # License: MIT
-# https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Based on work from https://i12bretro.github.io/tutorials/0405.html
 
-source /dev/stdin <<<$(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/api.func)
+source /dev/stdin <<<$(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/api.func)
 
 function header_info {
   clear
@@ -513,7 +513,7 @@ DESCRIPTION=$(
   cat <<EOF
 <div align='center'>
   <a href='https://Helper-Scripts.com' target='_blank' rel='noopener noreferrer'>
-    <img src='https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/images/logo-81x112.png' alt='Logo' style='width:81px;height:112px;'/>
+    <img src='https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/images/logo-81x112.png' alt='Logo' style='width:81px;height:112px;'/>
   </a>
 
   <h2 style='font-size: 24px; margin: 20px 0;'>OpenWrt VM</h2>

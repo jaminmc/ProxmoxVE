@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/jaminmc/ProxmoxVE/Proxmox9betatest/misc/build.func)
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/jaminmc/ProxmoxVE/raw/Proxmox9betatest/LICENSE
 # Source: https://github.com/TwiN/gatus
 
 APP="Alpine-gatus"
@@ -36,7 +36,7 @@ function update_script() {
     temp_file=$(mktemp)
     curl -fsSL "https://github.com/TwiN/gatus/archive/refs/tags/v${RELEASE}.tar.gz" -o "$temp_file"
     tar zxf "$temp_file" --strip-components=1 -C /opt/gatus
-    cd /opt/gatus
+    cd /opt/gatus || exit
     $STD go mod tidy
     CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o gatus .
     setcap CAP_NET_RAW+ep gatus
