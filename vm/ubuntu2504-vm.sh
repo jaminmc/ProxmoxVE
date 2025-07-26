@@ -137,17 +137,14 @@ function check_root() {
 }
 
 function pve_check() {
-  PVE_VERSION=$(pveversion | sed 's/pve-manager\///' | cut -d/ -f1)
+PVE_VERSION=$(pveversion | sed 's/pve-manager\///' | cut -d/ -f1)
   MAJOR=$(echo "$PVE_VERSION" | cut -d. -f1)
   MINOR=$(echo "$PVE_VERSION" | cut -d. -f2)
 
   if [[ "$MAJOR" -eq 8 && "$MINOR" -ge 1 ]]; then
     return  # Supported PVE 8.1+
   elif [[ "$MAJOR" -eq 9 ]]; then
-    if whiptail --backtitle "Proxmox VE Helper Scripts" --title "BETA SUPPORT WARNING" --yesno \
-      "Proxmox VE 9.x support is in BETA and may contain bugs or incompatibilities.\n\n" \
-      "By proceeding, you accept all risks, including potential data loss or system instability.\n\n" \
-      "Do you accept the risks and wish to continue?" 14 70; then
+    if whiptail --backtitle "Proxmox VE Helper Scripts" --title "BETA SUPPORT WARNING" --yesno "Proxmox VE 9.x support is in BETA and may contain bugs or incompatibilities.\n\nBy proceeding, you accept all risks, including potential data loss or system instability.\n\nDo you accept the risks and wish to continue?" 14 70; then
       msg_warn "Proceeding with PVE 9.x (BETA support) at user's risk."
       return
     else
@@ -159,16 +156,6 @@ function pve_check() {
   else
     msg_error "${CROSS}${RD}This version of Proxmox Virtual Environment is not supported"
     echo -e "Requires Proxmox Virtual Environment Version 8.1 or later (9.x is BETA)."
-    echo -e "Exiting..."
-    sleep 2
-    exit
-  fi
-}
-
-function arch_check() {
-  if [ "$(dpkg --print-architecture)" != "amd64" ]; then
-    echo -e "\n ${INFO}${YWB}This script will not work with PiMox! \n"
-    echo -e "\n ${YWB}Visit https://github.com/asylumexp/Proxmox for ARM64 support. \n"
     echo -e "Exiting..."
     sleep 2
     exit
